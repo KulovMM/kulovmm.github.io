@@ -1,0 +1,47 @@
+:root {
+  --bg: #ffffff;
+  --text: #0a0a0a;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.topbar {
+  padding: 28px 32px;
+}
+
+.name {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.scramble {
+  font-size: 40px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+}
+
+/* Each letter becomes its own hover target */
+.scramble .char {
+  display: inline-block;
+  will-change: transform, contents;
+}
+
+@media (max-width: 480px) {
+  .topbar { padding: 22px 20px; }
+  .scramble { font-size: 34px; }
+}
