@@ -98,7 +98,7 @@ function updateAge() {
   if (!ageEl) return;
   const ageYears = (Date.now() - BIRTH_DATE.getTime()) / MS_PER_YEAR;
   const whole = Math.floor(ageYears);
-  const frac = (ageYears - whole).toFixed(9).slice(1); // ".xxxxxxxxx"
+  const frac = (ageYears - whole).toFixed(8).slice(1); // ".xxxxxxxx"
   ageEl.textContent = whole + frac;
 }
 
