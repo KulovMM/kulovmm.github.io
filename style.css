@@ -1,7 +1,7 @@
 :root {
   --bg: #f9f7f4;
   --text: #111111;
-  --muted: #888880;
+  --muted: #555550;
   --accent: #111111;
 }
 
@@ -38,6 +38,7 @@ body {
   cursor: default;
   user-select: none;
   color: var(--text);
+  white-space: pre;
 }
 
 .scramble .char {
@@ -51,11 +52,12 @@ body {
 }
 
 .age-timer {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
+  margin-top: 12px;
 }
 
 @media (max-width: 480px) {
