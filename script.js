@@ -88,3 +88,19 @@ if (nameEl) {
     tickMs: 26,
   });
 }
+
+// Age timer
+const BIRTH_DATE = new Date("2005-07-19T00:00:00");
+const MS_PER_YEAR = 365.25 * 24 * 60 * 60 * 1000;
+
+function updateAge() {
+  const ageEl = document.getElementById("ageTimer");
+  if (!ageEl) return;
+  const ageYears = (Date.now() - BIRTH_DATE.getTime()) / MS_PER_YEAR;
+  const whole = Math.floor(ageYears);
+  const frac = (ageYears - whole).toFixed(6).slice(1); // ".xxxxxx"
+  ageEl.textContent = whole + frac;
+}
+
+updateAge();
+setInterval(updateAge, 50);

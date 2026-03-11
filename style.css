@@ -1,48 +1,65 @@
 :root {
-  --bg: #f6f2ea; 
-  
-  --text: #0a0a0a;
+  --bg: #f9f7f4;
+  --text: #111111;
+  --muted: #888880;
+  --accent: #111111;
 }
 
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+}
 
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
 .topbar {
-  padding: 28px 32px;
+  padding: 48px 52px 0;
 }
 
 .name {
-  text-decoration: none;
-  color: inherit;
   display: inline-block;
 }
 
 .scramble {
-  font-size: 40px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1;
   cursor: default;
   user-select: none;
+  color: var(--text);
 }
 
-/* Each letter becomes its own hover target */
 .scramble .char {
   display: inline-block;
-  will-change: transform, contents;
+  will-change: contents;
+}
+
+.content {
+  padding: 52px 52px;
+  flex: 1;
+}
+
+.age-timer {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 480px) {
-  .topbar { padding: 22px 20px; }
-  .scramble { font-size: 34px; }
+  .topbar { padding: 32px 28px 0; }
+  .content { padding: 36px 28px; }
+  .scramble { font-size: 22px; }
 }
