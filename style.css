@@ -60,6 +60,21 @@ body {
   margin-top: 12px;
 }
 
+.link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 1px;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 480px) {
   .topbar { padding: 32px 28px 0; }
   .content { padding: 36px 28px; }
