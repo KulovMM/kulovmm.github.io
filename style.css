@@ -49,6 +49,8 @@ body {
 .content {
   padding: 52px 52px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .age-timer {
@@ -62,7 +64,8 @@ body {
 
 .link {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: auto;
+  margin-bottom: 122px;
   color: var(--text);
   text-decoration: none;
   font-size: 15px;
