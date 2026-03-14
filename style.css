@@ -64,6 +64,7 @@ body {
 
 .link {
   display: inline-block;
+  align-self: flex-start;
   margin-top: auto;
   margin-bottom: 122px;
   color: var(--text);
